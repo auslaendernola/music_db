@@ -1,0 +1,21 @@
+<p>
+  <h3><%= @song.title %></h3>
+</p>
+
+<p>
+  <strong>By:</strong>
+  <%= @song.artist.try( :name ) %>
+</p>
+<p>
+  <strong>Genre:</strong>
+  <%= @song.artist.genre.try( :genre ) %>
+</p>
+
+<div>
+  <button type="button" class="btn-small btn-default">
+    <%= link_to 'Edit', edit_song_path(@song) %>
+  </button>
+  <button type="button" class="btn-small btn-default">
+    <%= link_to 'Back', songs_path %>
+  </button>
+</div>

@@ -1,0 +1,22 @@
+<h3>Songs by <span class="text-primary"><%= @artist.name %></span>
+<br>
+<small><%= @artist.genre.try(:genre) %></small></h3>
+<hr>
+<h4>Bio:</h4>
+<%= simple_format(@artist.bio) %>
+<hr>
+<h4>Songs:</h4>
+<ul>
+  <% @artist.songs.order('title').each do |song| %>
+    <li><%= song.title %></li>
+  <% end %>
+</ul>
+
+<div>
+  <button type="button" class="btn-small btn-default">
+    <%= link_to 'Edit', edit_artist_path(@artist) %>
+  </button>
+  <button type="button" class="btn-small btn-default">
+    <%= link_to 'Back', artists_path %>
+  </button>
+</div>
