@@ -5,7 +5,7 @@ class Artist < ActiveRecord::Base
 
   validates :name, uniqueness: true, length: { minimum: 2 }
   validates :genre_id, :name, presence: true
-
+  validates :genre, presence: true
   scope :recent, -> (minutes_past=60) {where("created_at > ?", minutes_past.minutes.ago)}
 
   scope :today, -> { where('DATE(created_at) = ?', Date.today) }
