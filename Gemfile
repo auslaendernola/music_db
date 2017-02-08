@@ -33,6 +33,8 @@ gem 'font-awesome-rails'
 gem 'quiet_assets', group: :development
 # Adds bootstrap and basic nav-bar themes
 gem 'starter_generators'
+
+gem 'annotate'
 # Adds fancy time and date formatting for humans to enjoy
 gem 'stamp'
 # Adds an annotated schema to each of the models
@@ -70,4 +72,3 @@ group :development do
   gem 'faker'
 
 end
-

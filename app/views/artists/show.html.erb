@@ -5,7 +5,7 @@
 <h4>Bio:</h4>
 <%= simple_format(@artist.bio) %>
 <hr>
-<h4>Songs:</h4>
+<h3><strong>Songs by <%= @artist.name %>:</strong></h3>
 <ul>
   <% @artist.songs.order('title').each do |song| %>
     <li><%= song.title %></li>

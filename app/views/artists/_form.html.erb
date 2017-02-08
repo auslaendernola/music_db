@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :genre_id %><br>
-    <%= f.collection_select :genre_id, Genre.order('genre'), :id, :genre %>
+    <%= f.collection_select :genre_id, Genre.order('genre'), :id, :genre, {class: 'form-control'} %>
   </div>
-  <div class="actions">
+  <div class="actions form-group">
     <%= f.submit "Save Artist", class: "btn btn-sm btn-success" %>
   </div>
 <% end %>

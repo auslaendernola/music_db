@@ -19,13 +19,13 @@
           <%= song.artist.try(:name) %>
         </td>
         <td class="text-center">
-          <%= link_to fa_icon('eye', text: 'Show'), song %>
+          <%= link_to fa_icon('eye', text: 'Show'), song, class: 'btn btn-xs btn-default' %>
         </td>
         <td class="text-center">
-          <%= link_to fa_icon('pencil', text: 'Edit'), edit_song_path(song) %>
+          <%= link_to fa_icon('pencil', text: 'Edit'), edit_song_path(song), class: 'btn btn-xs btn-info' %>
         </td>
         <td class="text-center">
-          <%= link_to fa_icon('trash-o', text: 'Delete'), song, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to fa_icon('trash-o', text: 'Delete'), song, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-xs btn-danger' %>
         </td>
       </tr>
     <% end %>
@@ -35,7 +35,5 @@
 <br>
 
 <div>
-  <button class="btn btn-sm btn-default">
-    <%= link_to 'New Song', new_song_path %>
-  </button>
+    <%= link_to 'New Song', new_song_path, class: 'btn btn-sm btn-success' %>
 </div>
